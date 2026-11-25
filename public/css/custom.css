@@ -1,0 +1,102 @@
+/* Custom CSS for Inventori Peminjaman Barang BPS Kabupaten Bandung */
+:root {
+  --bps-orange-primary: #ea580c;
+  --bps-orange-dark: #c2410c;
+  --bps-orange-light: #ffedd5;
+  --bps-blue-primary: #1d4ed8;
+  --bps-blue-light: #eff6ff;
+  --bps-green-primary: #15803d;
+  --bps-green-light: #f0fdf4;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Document Paper Replication (Sama Persis Dokumen Resmi BPS) */
+.doc-sheet {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 2.5rem;
+  margin: 0 auto;
+}
+
+.doc-sheet-landscape {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.doc-sheet-portrait {
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Tabel Administrasi Resmi Kedinasan: Garis hitam tipis */
+.table-official {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.table-official th,
+.table-official td {
+  border: 1px solid #000000;
+  padding: 4px 6px;
+  vertical-align: middle;
+}
+
+.table-official th {
+  font-weight: bold;
+  text-align: center;
+  background-color: #f3f4f6;
+}
+
+.table-compact th,
+.table-compact td {
+  padding: 2px 4px;
+  font-size: 10.5px;
+}
+
+/* Print Specific Rules */
+@media print {
+  body {
+    background: #ffffff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .no-print, .sidebar, .top-header, .btn, .nav-tabs, footer, header, nav, .alert, .action-buttons-kk {
+    display: none !important;
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .doc-sheet {
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  @page {
+    size: landscape;
+    margin: 0.8cm;
+  }
+
+  .page-break {
+    page-break-after: always;
+  }
+
+  .table-official {
+    font-size: 9pt;
+  }
+}

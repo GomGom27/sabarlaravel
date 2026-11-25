@@ -1,0 +1,69 @@
+/* ==========================================================================
+   CSS Pratinjau & Cetak Laporan Persediaan BPS Kabupaten Bandung
+   Halaman: templates/laporan/print.html
+   ========================================================================== */
+
+@page {
+    size: landscape;
+    margin: 0.8cm;
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 10px;
+    font-size: 8pt;
+}
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.font-bold { font-weight: bold; }
+.underline { text-decoration: underline; }
+
+.table-laporan {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table-laporan th, .table-laporan td {
+    border: 0.8px solid #000000;
+    padding: 2.5px 3px;
+    font-size: 7.5pt;
+}
+
+.table-laporan th {
+    font-weight: bold;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.no-print-bar {
+    background: #ea580c;
+    color: white;
+    padding: 8px 16px;
+    font-size: 11pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-family: sans-serif;
+}
+
+.btn {
+    background: white;
+    color: #ea580c;
+    border: none;
+    padding: 6px 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+@media print {
+    .no-print-bar { display: none !important; }
+    body { padding: 0 !important; }
+}
